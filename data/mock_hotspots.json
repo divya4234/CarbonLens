@@ -1,0 +1,326 @@
+[
+  {
+    "zone_id": "BH-001",
+    "name": "Acharya Vihar",
+    "latitude": 20.312456,
+    "longitude": 85.823456,
+    "pm25": 65.23,
+    "co2": 385.67,
+    "risk_level": "Medium",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-15T10:30:00"
+  },
+  {
+    "zone_id": "BH-002",
+    "name": "Bapuji Nagar",
+    "latitude": 20.284567,
+    "longitude": 85.812345,
+    "pm25": 45.12,
+    "co2": 320.45,
+    "risk_level": "Low",
+    "source_type": "Residential",
+    "preventive_measures": [
+      "Promote clean cooking fuels",
+      "Awareness campaigns on waste management",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-14T14:20:00"
+  },
+  {
+    "zone_id": "BH-003",
+    "name": "Bhubaneswar Railway Station",
+    "latitude": 20.301234,
+    "longitude": 85.834567,
+    "pm25": 95.78,
+    "co2": 445.89,
+    "risk_level": "High",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Consider vehicle restrictions during peak hours",
+      "Install air purifiers at traffic intersections"
+    ],
+    "last_updated": "2025-01-15T08:15:00"
+  },
+  {
+    "zone_id": "BH-004",
+    "name": "Cuttack Road",
+    "latitude": 20.289012,
+    "longitude": 85.801234,
+    "pm25": 78.45,
+    "co2": 410.23,
+    "risk_level": "Medium",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-13T16:45:00"
+  },
+  {
+    "zone_id": "BH-005",
+    "name": "Dumduma",
+    "latitude": 20.305678,
+    "longitude": 85.845678,
+    "pm25": 52.34,
+    "co2": 355.67,
+    "risk_level": "Medium",
+    "source_type": "Residential",
+    "preventive_measures": [
+      "Promote clean cooking fuels",
+      "Awareness campaigns on waste management",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-14T11:30:00"
+  },
+  {
+    "zone_id": "BH-006",
+    "name": "Gangapada",
+    "latitude": 20.276543,
+    "longitude": 85.823456,
+    "pm25": 38.90,
+    "co2": 298.12,
+    "risk_level": "Low",
+    "source_type": "Residential",
+    "preventive_measures": [
+      "Promote clean cooking fuels",
+      "Awareness campaigns on waste management",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-12T09:20:00"
+  },
+  {
+    "zone_id": "BH-007",
+    "name": "Infocity",
+    "latitude": 20.318901,
+    "longitude": 85.856789,
+    "pm25": 42.56,
+    "co2": 312.34,
+    "risk_level": "Low",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-15T07:00:00"
+  },
+  {
+    "zone_id": "BH-008",
+    "name": "Jagamara",
+    "latitude": 20.292345,
+    "longitude": 85.812345,
+    "pm25": 88.12,
+    "co2": 425.67,
+    "risk_level": "Medium",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-14T13:15:00"
+  },
+  {
+    "zone_id": "BH-009",
+    "name": "Khandagiri",
+    "latitude": 20.264567,
+    "longitude": 85.789012,
+    "pm25": 35.78,
+    "co2": 285.45,
+    "risk_level": "Low",
+    "source_type": "Residential",
+    "preventive_measures": [
+      "Promote clean cooking fuels",
+      "Awareness campaigns on waste management",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-11T15:30:00"
+  },
+  {
+    "zone_id": "BH-010",
+    "name": "Lingaraj Temple Area",
+    "latitude": 20.278901,
+    "longitude": 85.834567,
+    "pm25": 72.34,
+    "co2": 395.78,
+    "risk_level": "Medium",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-13T10:45:00"
+  },
+  {
+    "zone_id": "BH-011",
+    "name": "Master Canteen",
+    "latitude": 20.301234,
+    "longitude": 85.823456,
+    "pm25": 102.45,
+    "co2": 468.90,
+    "risk_level": "High",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Consider vehicle restrictions during peak hours",
+      "Install air purifiers at traffic intersections"
+    ],
+    "last_updated": "2025-01-15T12:00:00"
+  },
+  {
+    "zone_id": "BH-012",
+    "name": "Nayapalli",
+    "latitude": 20.315678,
+    "longitude": 85.845678,
+    "pm25": 58.67,
+    "co2": 368.12,
+    "risk_level": "Medium",
+    "source_type": "Residential",
+    "preventive_measures": [
+      "Promote clean cooking fuels",
+      "Awareness campaigns on waste management",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-14T16:20:00"
+  },
+  {
+    "zone_id": "BH-013",
+    "name": "Old Town",
+    "latitude": 20.273456,
+    "longitude": 85.801234,
+    "pm25": 82.34,
+    "co2": 415.56,
+    "risk_level": "Medium",
+    "source_type": "Residential",
+    "preventive_measures": [
+      "Promote clean cooking fuels",
+      "Awareness campaigns on waste management",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-13T14:30:00"
+  },
+  {
+    "zone_id": "BH-014",
+    "name": "Patia",
+    "latitude": 20.327890,
+    "longitude": 85.856789,
+    "pm25": 48.90,
+    "co2": 335.78,
+    "risk_level": "Low",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-12T11:15:00"
+  },
+  {
+    "zone_id": "BH-015",
+    "name": "Rasulgarh",
+    "latitude": 20.286789,
+    "longitude": 85.812345,
+    "pm25": 115.67,
+    "co2": 512.34,
+    "risk_level": "High",
+    "source_type": "Industry",
+    "preventive_measures": [
+      "Enforce emission control regulations",
+      "Regular monitoring and compliance checks",
+      "Temporary shutdown for maintenance",
+      "Upgrade to cleaner production technologies"
+    ],
+    "last_updated": "2025-01-15T09:30:00"
+  },
+  {
+    "zone_id": "BH-016",
+    "name": "Sahid Nagar",
+    "latitude": 20.304567,
+    "longitude": 85.834567,
+    "pm25": 55.23,
+    "co2": 345.67,
+    "risk_level": "Medium",
+    "source_type": "Residential",
+    "preventive_measures": [
+      "Promote clean cooking fuels",
+      "Awareness campaigns on waste management",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-14T08:45:00"
+  },
+  {
+    "zone_id": "BH-017",
+    "name": "Sainik School",
+    "latitude": 20.271234,
+    "longitude": 85.789012,
+    "pm25": 41.56,
+    "co2": 308.90,
+    "risk_level": "Low",
+    "source_type": "Residential",
+    "preventive_measures": [
+      "Promote clean cooking fuels",
+      "Awareness campaigns on waste management",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-11T13:20:00"
+  },
+  {
+    "zone_id": "BH-018",
+    "name": "Vani Vihar",
+    "latitude": 20.322345,
+    "longitude": 85.845678,
+    "pm25": 68.78,
+    "co2": 378.45,
+    "risk_level": "Medium",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-13T12:00:00"
+  },
+  {
+    "zone_id": "BH-019",
+    "name": "VSS Nagar",
+    "latitude": 20.298901,
+    "longitude": 85.823456,
+    "pm25": 75.12,
+    "co2": 402.34,
+    "risk_level": "Medium",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Plant trees and create green buffers"
+    ],
+    "last_updated": "2025-01-14T15:30:00"
+  },
+  {
+    "zone_id": "BH-020",
+    "name": "Bhubaneswar Airport",
+    "latitude": 20.244567,
+    "longitude": 85.812345,
+    "pm25": 92.45,
+    "co2": 438.67,
+    "risk_level": "High",
+    "source_type": "Traffic",
+    "preventive_measures": [
+      "Implement traffic flow optimization",
+      "Promote public transportation",
+      "Consider vehicle restrictions during peak hours",
+      "Install air purifiers at traffic intersections"
+    ],
+    "last_updated": "2025-01-15T06:00:00"
+  }
+]
