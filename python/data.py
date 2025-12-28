@@ -1,268 +1,117 @@
-[
-  {
-    "location": "Rasulgarh Square",
-    "type": "Traffic Hotspot",
-    "loc": { "type": "Point", "coordinates": [ 85.8650, 20.2900 ] },
-    "date": "2025-08-15T09:00:00Z",
-    "aqi": 55,
-    "pm2_5": 32,
-    "pm10": 68,
-    "no2": 25,
-    "so2": 12,
-    "co": 0.8,
-    "season": "Monsoon",
-    "notes": "Low emissions due to washout effect."
-  },
-  {
-    "location": "Mancheswar Industrial Estate",
-    "type": "Industrial",
-    "loc": { "type": "Point", "coordinates": [ 85.8550, 20.3150 ] },
-    "date": "2025-08-15T10:00:00Z",
-    "aqi": 72,
-    "pm2_5": 45,
-    "pm10": 85,
-    "no2": 35,
-    "so2": 22,
-    "co": 1.1,
-    "season": "Monsoon",
-    "notes": "Industrial activity constant; particulate matter suppressed by rain."
-  },
-  {
-    "location": "Patia (KIIT Square)",
-    "type": "Residential/Commercial",
-    "loc": { "type": "Point", "coordinates": [ 85.8150, 20.3500 ] },
-    "date": "2025-08-15T18:00:00Z",
-    "aqi": 48,
-    "pm2_5": 28,
-    "pm10": 55,
-    "no2": 18,
-    "so2": 8,
-    "co": 0.6,
-    "season": "Monsoon",
-    "notes": "Good air quality."
-  },
-  {
-    "location": "Rasulgarh Square",
-    "type": "Traffic Hotspot",
-    "loc": { "type": "Point", "coordinates": [ 85.8650, 20.2900 ] },
-    "date": "2025-09-10T08:30:00Z",
-    "aqi": 62,
-    "pm2_5": 38,
-    "pm10": 75,
-    "no2": 28,
-    "so2": 14,
-    "co": 0.9,
-    "season": "Post-Monsoon",
-    "notes": "Traffic volume increasing; rain subsiding."
-  },
-  {
-    "location": "Laxmi Sagar",
-    "type": "Mixed/Traffic",
-    "loc": { "type": "Point", "coordinates": [ 85.8500, 20.2800 ] },
-    "date": "2025-09-10T19:00:00Z",
-    "aqi": 68,
-    "pm2_5": 41,
-    "pm10": 82,
-    "no2": 30,
-    "so2": 15,
-    "co": 1.0,
-    "season": "Post-Monsoon",
-    "notes": "Evening peak hour traffic."
-  },
-  {
-    "location": "Rasulgarh Square",
-    "type": "Traffic Hotspot",
-    "loc": { "type": "Point", "coordinates": [ 85.8650, 20.2900 ] },
-    "date": "2025-10-15T09:00:00Z",
-    "aqi": 115,
-    "pm2_5": 65,
-    "pm10": 140,
-    "no2": 45,
-    "so2": 18,
-    "co": 1.4,
-    "season": "Autumn",
-    "notes": "Transition period; dust resuspension increasing."
-  },
-  {
-    "location": "Mancheswar Industrial Estate",
-    "type": "Industrial",
-    "loc": { "type": "Point", "coordinates": [ 85.8550, 20.3150 ] },
-    "date": "2025-10-15T22:00:00Z",
-    "aqi": 145,
-    "pm2_5": 82,
-    "pm10": 160,
-    "no2": 52,
-    "so2": 28,
-    "co": 1.8,
-    "season": "Autumn",
-    "notes": "Nighttime industrial emissions accumulation."
-  },
-  {
-    "location": "Patia (KIIT Square)",
-    "type": "Residential/Commercial",
-    "loc": { "type": "Point", "coordinates": [ 85.8150, 20.3500 ] },
-    "date": "2025-10-20T08:00:00Z",
-    "aqi": 95,
-    "pm2_5": 55,
-    "pm10": 110,
-    "no2": 35,
-    "so2": 12,
-    "co": 1.1,
-    "season": "Autumn",
-    "notes": "Moderate AQI; increased student traffic."
-  },
-  {
-    "location": "Rasulgarh Square",
-    "type": "Traffic Hotspot",
-    "loc": { "type": "Point", "coordinates": [ 85.8650, 20.2900 ] },
-    "date": "2025-11-12T08:30:00Z",
-    "aqi": 210,
-    "pm2_5": 125,
-    "pm10": 240,
-    "no2": 65,
-    "so2": 25,
-    "co": 2.2,
-    "season": "Winter Start",
-    "notes": "Poor AQI; Inversion layer trapping pollutants."
-  },
-  {
-    "location": "Laxmi Sagar",
-    "type": "Mixed/Traffic",
-    "loc": { "type": "Point", "coordinates": [ 85.8500, 20.2800 ] },
-    "date": "2025-11-12T20:00:00Z",
-    "aqi": 235,
-    "pm2_5": 140,
-    "pm10": 260,
-    "no2": 72,
-    "so2": 28,
-    "co": 2.5,
-    "season": "Winter Start",
-    "notes": "Severe evening smog."
-  },
-  {
-    "location": "Master Canteen",
-    "type": "Transit Hub",
-    "loc": { "type": "Point", "coordinates": [ 85.8430, 20.2667 ] },
-    "date": "2025-11-15T17:00:00Z",
-    "aqi": 185,
-    "pm2_5": 110,
-    "pm10": 210,
-    "no2": 58,
-    "so2": 20,
-    "co": 1.9,
-    "season": "Winter Start",
-    "notes": "Station traffic congestion contributing to PM2.5."
-  },
-  {
-    "location": "Rasulgarh Square",
-    "type": "Traffic Hotspot",
-    "loc": { "type": "Point", "coordinates": [ 85.8650, 20.2900 ] },
-    "date": "2025-12-05T09:00:00Z",
-    "aqi": 285,
-    "pm2_5": 175,
-    "pm10": 310,
-    "no2": 82,
-    "so2": 35,
-    "co": 3.1,
-    "season": "Peak Winter",
-    "notes": "Very Poor; NH traffic + construction dust."
-  },
-  {
-    "location": "Patia (KIIT Square)",
-    "type": "Residential/Commercial",
-    "loc": { "type": "Point", "coordinates": [ 85.8150, 20.3500 ] },
-    "date": "2025-12-10T07:00:00Z",
-    "aqi": 195,
-    "pm2_5": 115,
-    "pm10": 200,
-    "no2": 45,
-    "so2": 15,
-    "co": 1.5,
-    "season": "Peak Winter",
-    "notes": "Morning smog observed."
-  },
-  {
-    "location": "Mancheswar Industrial Estate",
-    "type": "Industrial",
-    "loc": { "type": "Point", "coordinates": [ 85.8550, 20.3150 ] },
-    "date": "2025-12-15T03:00:00Z",
-    "aqi": 310,
-    "pm2_5": 195,
-    "pm10": 350,
-    "no2": 88,
-    "so2": 42,
-    "co": 2.8,
-    "season": "Peak Winter",
-    "notes": "Severe; Night time accumulation from factories."
-  },
-  {
-    "location": "Laxmi Sagar",
-    "type": "Mixed/Traffic",
-    "loc": { "type": "Point", "coordinates": [ 85.8500, 20.2800 ] },
-    "date": "2025-12-24T18:00:00Z",
-    "aqi": 291,
-    "pm2_5": 230,
-    "pm10": 320,
-    "no2": 78,
-    "so2": 30,
-    "co": 2.9,
-    "season": "Peak Winter",
-    "notes": "Severe Spike; Christmas Eve traffic."
-  },
-  {
-    "location": "Rasulgarh Square",
-    "type": "Traffic Hotspot",
-    "loc": { "type": "Point", "coordinates": [ 85.8650, 20.2900 ] },
-    "date": "2025-12-25T20:00:00Z",
-    "aqi": 339,
-    "pm2_5": 245,
-    "pm10": 380,
-    "no2": 90,
-    "so2": 38,
-    "co": 3.5,
-    "season": "Peak Winter",
-    "notes": "Critical levels; holiday traffic peaking."
-  },
-  {
-    "location": "Khandagiri Square",
-    "type": "Traffic/Entry Point",
-    "loc": { "type": "Point", "coordinates": [ 85.7950, 20.2550 ] },
-    "date": "2025-12-26T08:30:00Z",
-    "aqi": 265,
-    "pm2_5": 160,
-    "pm10": 290,
-    "no2": 70,
-    "so2": 25,
-    "co": 2.6,
-    "season": "Peak Winter",
-    "notes": "Heavy truck movement on highway."
-  },
-  {
-    "location": "Patia (KIIT Square)",
-    "type": "Residential/Commercial",
-    "loc": { "type": "Point", "coordinates": [ 85.8150, 20.3500 ] },
-    "date": "2025-12-27T10:00:00Z",
-    "aqi": 168,
-    "pm2_5": 95,
-    "pm10": 175,
-    "no2": 40,
-    "so2": 14,
-    "co": 1.3,
-    "season": "Peak Winter",
-    "notes": "Moderate-Poor; better than city center."
-  },
-  {
-    "location": "Rasulgarh Square",
-    "type": "Traffic Hotspot",
-    "loc": { "type": "Point", "coordinates": [ 85.8650, 20.2900 ] },
-    "date": "2025-12-27T11:00:00Z",
-    "aqi": 281,
-    "pm2_5": 206,
-    "pm10": 224,
-    "no2": 45,
-    "so2": 30,
-    "co": 62,
-    "season": "Peak Winter",
-    "notes": "Current severe conditions confirmed."
-  }
+import json
+import random
+import pandas as pd
+from datetime import datetime, timedelta
+
+from pymongo import MongoClient
+import certifi
+
+CONNECTION_STRING = "mongodb+srv://divya1234:fighters123@bhubaneswar-aqi-data.k3appqf.mongodb.net/?appName=Bhubaneswar-AQI-Data"
+
+try:
+    client = MongoClient(CONNECTION_STRING)
+    db = client["Bhubaneswar_Research"]
+    collection = db["AirQuality_2025"]
+    print("Connected to MongoDB Atlas")
+except Exception as e:
+    print(f"Connection failed: {e}")
+    exit()
+
+# --- EXPANDED RESEARCH-BACKED REGIONS ---
+locations = [
+    {"id": "BBSR-01", "name": "Rasulgarh Square", "type": "Traffic Hub", "lat": 20.2900, "lon": 85.8650, "load": 85},
+    {"id": "BBSR-02", "name": "Palasuni", "type": "High Emission", "lat": 20.3010, "lon": 85.8680, "load": 95},
+    {"id": "BBSR-03", "name": "Laxmi Sagar", "type": "Mixed/Urban", "lat": 20.2800, "lon": 85.8500, "load": 80},
+    {"id": "BBSR-04", "name": "Patia (Infocity)", "type": "Institutional", "lat": 20.3500, "lon": 85.8150, "load": 45},
+    {"id": "BBSR-05", "name": "Mancheswar IE", "type": "Industrial", "lat": 20.3150, "lon": 85.8550, "load": 88},
+    {"id": "BBSR-06", "name": "Master Canteen", "type": "Transit/Station", "lat": 20.2667, "lon": 85.8430, "load": 75},
+    {"id": "BBSR-07", "name": "Nayapalli", "type": "Residential/Commercial", "lat": 20.2980, "lon": 85.8200, "load": 65},
+    {"id": "BBSR-08", "name": "Old Town (Lingaraj)", "type": "Heritage/Dense", "lat": 20.2350, "lon": 85.8330, "load": 55},
+    {"id": "BBSR-09", "name": "Khandagiri", "type": "Highway Entry", "lat": 20.2550, "lon": 85.7950, "load": 82},
+    {"id": "BBSR-10", "name": "Chandrasekharpur", "type": "Residential", "lat": 20.3200, "lon": 85.8250, "load": 50}
 ]
+
+def get_calibrated_factors(dt):
+    if dt.month in [8, 9]: return 0.55
+    if dt.month == 10:
+        if 20 <= dt.day <= 22: return 3.2 
+        return 1.1
+    if dt.month == 11: return 1.9
+    if dt.month == 12:
+        if dt.day > 24: return 3.4 
+        return 2.7
+    return 1.0
+
+rows = []
+start = datetime(2025, 8, 1)
+end = datetime(2025, 12, 28)
+curr = start
+
+while curr <= end:
+    season_factor = get_calibrated_factors(curr)
+    for loc in locations:
+        hour = curr.hour
+        time_factor = 1.7 if (hour >= 21 or hour <= 3) else 0.8 if (11 <= hour <= 16) else 1.3
+        
+        pm2_5 = int(loc['load'] * season_factor * time_factor + random.uniform(-10, 10))
+        pm2_5 = max(10, pm2_5)
+        pm10 = int(pm2_5 * 1.5)
+        no2 = int(pm2_5 * 0.3) if loc['type'] != 'Traffic Hub' else int(pm2_5 * 0.7)
+        aqi = int(pm2_5 * 1.4)
+        
+        status = "Good" if aqi <= 50 else "Satisfactory" if aqi <= 100 else "Moderate" if aqi <= 200 else "Poor" if aqi <= 300 else "Very Poor" if aqi <= 400 else "Severe"
+
+        # FLATTENED STRUCTURE FOR CSV
+        rows.append({
+            "region_id": loc['id'],
+            "name": loc['name'],
+            "zone": loc['type'],
+            "latitude": loc['lat'],
+            "longitude": loc['lon'],
+            "timestamp": curr.strftime("%Y-%m-%d %H:%M:%S"),
+            "aqi": aqi,
+            "pm2_5": pm2_5,
+            "pm10": pm10,
+            "no2": no2,
+            "temp_c": 28 if curr.month < 11 else 21,
+            "status": status
+        })
+    curr += timedelta(hours=6)
+
+# --- CSV EXPORT ---
+df = pd.DataFrame(rows)
+df.to_csv("Bhubaneswar_Professional_Final.csv", index=False)
+print(f"CSV saved with {len(df)} records.")
+
+
+
+
+
+def manual_upload():
+    try:
+        # Connect using the SSL certificate fix
+        client = MongoClient(CONNECTION_STRING, tlsCAFile=certifi.where())
+        
+        # Define Database and Collection
+        db = client["Bhubaneswar_Analytics"]
+        collection = db["AQI_Historical_Data"]
+        
+        # 2. LOAD YOUR LOCAL FILE
+        with open("Bhubaneswar_Professional_Final.json", "r") as file:
+            data = json.load(file)
+            
+        print(f"File loaded. Found {len(data)} records.")
+
+        # 3. MANUAL UPLOAD
+        # We delete existing data first to avoid duplicates during testing
+        collection.delete_many({}) 
+        print("Cleaned old data from collection.")
+
+        result = collection.insert_many(data)
+        print(f"Success! {len(result.inserted_ids)} records are now in MongoDB Atlas.")
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    manual_upload()
