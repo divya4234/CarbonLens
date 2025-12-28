@@ -23,16 +23,20 @@ export default function HotspotsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [riskFilter, setRiskFilter] = useState<string>('all');
+  const [sourceFilter, setSourceFilter] = useState<string>('all');
 
   useEffect(() => {
     async function loadHotspots() {
       try {
+        setLoading(true);
+        setError(null);
         const data = await getHotspots();
         setHotspots(data);
         setFilteredHotspots(data);
         setLoading(false);
-      } catch (err) {
-        setError('Failed to load hotspots');
+      } catch (err: any) {
+        console.error('Error loading hotspots:', err);
+        setError(err.message || 'Failed to load hotspots. Please check your database connection.');
         setLoading(false);
       }
     }
@@ -40,14 +44,24 @@ export default function HotspotsPage() {
   }, []);
 
   useEffect(() => {
-    if (riskFilter === 'all') {
-      setFilteredHotspots(hotspots);
-    } else {
-      setFilteredHotspots(
-        hotspots.filter((h) => h.risk_level.toLowerCase() === riskFilter)
+    let filtered = hotspots;
+
+    // Apply risk level filter
+    if (riskFilter !== 'all') {
+      filtered = filtered.filter(
+        (h) => h.risk_level.toLowerCase() === riskFilter
       );
     }
-  }, [riskFilter, hotspots]);
+
+    // Apply source type filter
+    if (sourceFilter !== 'all') {
+      filtered = filtered.filter(
+        (h) => h.source_type.toLowerCase() === sourceFilter
+      );
+    }
+
+    setFilteredHotspots(filtered);
+  }, [riskFilter, sourceFilter, hotspots]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -92,22 +106,40 @@ export default function HotspotsPage() {
             Emission Hotspots
           </h2>
 
-          {/* Filter */}
+          {/* Filters */}
           <div className="flex items-center space-x-4">
-            <label htmlFor="risk-filter" className="text-sm font-medium text-gray-700">
-              Filter by Risk:
-            </label>
-            <select
-              id="risk-filter"
-              value={riskFilter}
-              onChange={(e) => setRiskFilter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="all">All</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-            </select>
+            <div className="flex items-center space-x-2">
+              <label htmlFor="risk-filter" className="text-sm font-medium text-gray-700">
+                Risk:
+              </label>
+              <select
+                id="risk-filter"
+                value={riskFilter}
+                onChange={(e) => setRiskFilter(e.target.value)}
+                className="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="all">All</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <div className="flex items-center space-x-2">
+              <label htmlFor="source-filter" className="text-sm font-medium text-gray-700">
+                Source:
+              </label>
+              <select
+                id="source-filter"
+                value={sourceFilter}
+                onChange={(e) => setSourceFilter(e.target.value)}
+                className="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="all">All</option>
+                <option value="traffic">Traffic</option>
+                <option value="industry">Industry</option>
+                <option value="residential">Residential</option>
+              </select>
+            </div>
           </div>
         </div>
 

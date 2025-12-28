@@ -37,11 +37,14 @@ export default function MapPage() {
   useEffect(() => {
     async function loadHotspots() {
       try {
+        setLoading(true);
+        setError(null);
         const data = await getHotspots();
         setHotspots(data);
         setLoading(false);
-      } catch (err) {
-        setError('Failed to load hotspots');
+      } catch (err: any) {
+        console.error('Error loading hotspots:', err);
+        setError(err.message || 'Failed to load hotspots. Please check your database connection.');
         setLoading(false);
       }
     }

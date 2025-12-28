@@ -15,10 +15,12 @@ import StatsPanel from '../components/StatsPanel';
 
 export default async function HomePage() {
   let stats;
+  let error = null;
   try {
     stats = await getStats();
-  } catch (error) {
-    console.error('Failed to load stats:', error);
+  } catch (err: any) {
+    console.error('Failed to load stats:', err);
+    error = err.message || 'Failed to load statistics';
     stats = null;
   }
 
@@ -111,12 +113,29 @@ export default async function HomePage() {
         </section>
 
         {/* Statistics Panel */}
+        {error && (
+          <section className="mb-12">
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+              <p className="text-red-800">Error loading statistics: {error}</p>
+              <p className="text-sm text-red-600 mt-2">
+                Please ensure the database is connected and seeded.
+              </p>
+            </div>
+          </section>
+        )}
         {stats && (
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Key Statistics
             </h2>
             <StatsPanel stats={stats} />
+          </section>
+        )}
+        {!stats && !error && (
+          <section>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <p className="text-yellow-800">No statistics available. Please seed the database.</p>
+            </div>
           </section>
         )}
 

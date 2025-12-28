@@ -11,11 +11,12 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '../../lib/backend/mongodb';
-import Hotspot from '../../lib/backend/models/Hotspot';
+import connectDB from '../../../lib/backend/mongodb';
+import Hotspot from '../../../lib/backend/models/Hotspot';
 
 export async function GET(request: NextRequest) {
   try {
+    // Connect to database
     await connectDB();
 
     // Get total count
@@ -77,10 +78,19 @@ export async function GET(request: NextRequest) {
     );
   } catch (error: any) {
     console.error('Error fetching stats:', error);
+    
+    // Provide more specific error messages
+    let errorMessage = 'Failed to fetch stats';
+    if (error.message?.includes('MongoServerError') || error.message?.includes('MongoNetworkError')) {
+      errorMessage = 'Database connection error. Please check your MongoDB connection.';
+    } else if (error.message) {
+      errorMessage = error.message;
+    }
+
     return NextResponse.json(
       {
         success: false,
-        error: error.message || 'Failed to fetch stats',
+        error: errorMessage,
       },
       { status: 500 }
     );

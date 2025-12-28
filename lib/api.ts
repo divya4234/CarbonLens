@@ -10,7 +10,8 @@
  * - Support pagination
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+// Use relative URLs for Next.js API routes
+// In server components, we can use absolute URLs, but for client components we use relative paths
 
 export interface Hotspot {
   _id?: string;
@@ -45,6 +46,18 @@ export interface Stats {
 }
 
 /**
+ * Get API base URL - works in both server and client components
+ */
+function getApiUrl(): string {
+  if (typeof window !== 'undefined') {
+    // Client-side: use relative URL
+    return '';
+  }
+  // Server-side: use absolute URL
+  return process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+}
+
+/**
  * Fetch all hotspots with optional filters
  */
 export async function getHotspots(
@@ -55,11 +68,19 @@ export async function getHotspots(
   if (riskLevel) params.append('risk_level', riskLevel);
   if (sourceType) params.append('source_type', sourceType);
 
-  const url = `${API_BASE_URL}/api/hotspots${params.toString() ? `?${params.toString()}` : ''}`;
-  const response = await fetch(url, { cache: 'no-store' });
+  const baseUrl = getApiUrl();
+  const url = `${baseUrl}/api/hotspots${params.toString() ? `?${params.toString()}` : ''}`;
+  
+  const response = await fetch(url, { 
+    cache: 'no-store',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
   if (!response.ok) {
-    throw new Error('Failed to fetch hotspots');
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.error || `Failed to fetch hotspots: ${response.statusText}`);
   }
 
   const data = await response.json();
@@ -70,12 +91,17 @@ export async function getHotspots(
  * Fetch a single hotspot by zone_id
  */
 export async function getHotspot(id: string): Promise<Hotspot> {
-  const response = await fetch(`${API_BASE_URL}/api/hotspots/${id}`, {
+  const baseUrl = getApiUrl();
+  const response = await fetch(`${baseUrl}/api/hotspots/${id}`, {
     cache: 'no-store',
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
 
   if (!response.ok) {
-    throw new Error('Failed to fetch hotspot');
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.error || `Failed to fetch hotspot: ${response.statusText}`);
   }
 
   const data = await response.json();
@@ -86,12 +112,17 @@ export async function getHotspot(id: string): Promise<Hotspot> {
  * Fetch aggregate statistics
  */
 export async function getStats(): Promise<Stats> {
-  const response = await fetch(`${API_BASE_URL}/api/stats`, {
+  const baseUrl = getApiUrl();
+  const response = await fetch(`${baseUrl}/api/stats`, {
     cache: 'no-store',
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
 
   if (!response.ok) {
-    throw new Error('Failed to fetch stats');
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.error || `Failed to fetch stats: ${response.statusText}`);
   }
 
   const data = await response.json();

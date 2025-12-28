@@ -14,11 +14,12 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '../../lib/backend/mongodb';
-import Hotspot from '../../lib/backend/models/Hotspot';
+import connectDB from '../../../lib/backend/mongodb';
+import Hotspot from '../../../lib/backend/models/Hotspot';
 
 export async function GET(request: NextRequest) {
   try {
+    // Connect to database
     await connectDB();
 
     // Get query parameters
@@ -36,22 +37,42 @@ export async function GET(request: NextRequest) {
     }
 
     // Fetch hotspots from database
-    const hotspots = await Hotspot.find(filter).sort({ last_updated: -1 });
+    const hotspots = await Hotspot.find(filter)
+      .sort({ last_updated: -1 })
+      .lean(); // Use lean() for better performance
+
+    // Convert MongoDB _id and dates to JSON-serializable format
+    const serializedHotspots = hotspots.map((hotspot: any) => ({
+      ...hotspot,
+      _id: hotspot._id.toString(),
+      last_updated: hotspot.last_updated.toISOString(),
+      createdAt: hotspot.createdAt?.toISOString(),
+      updatedAt: hotspot.updatedAt?.toISOString(),
+    }));
 
     return NextResponse.json(
       {
         success: true,
-        count: hotspots.length,
-        data: hotspots,
+        count: serializedHotspots.length,
+        data: serializedHotspots,
       },
       { status: 200 }
     );
   } catch (error: any) {
     console.error('Error fetching hotspots:', error);
+    
+    // Provide more specific error messages
+    let errorMessage = 'Failed to fetch hotspots';
+    if (error.message?.includes('MongoServerError') || error.message?.includes('MongoNetworkError')) {
+      errorMessage = 'Database connection error. Please check your MongoDB connection.';
+    } else if (error.message) {
+      errorMessage = error.message;
+    }
+
     return NextResponse.json(
       {
         success: false,
-        error: error.message || 'Failed to fetch hotspots',
+        error: errorMessage,
       },
       { status: 500 }
     );

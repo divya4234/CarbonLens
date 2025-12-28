@@ -31,11 +31,11 @@ async function seedDatabase() {
 
     // Clear existing data (optional - comment out if you want to keep existing data)
     await Hotspot.deleteMany({});
-    console.log('🗑️  Cleared existing hotspots');
+    console.log('Cleared existing hotspots');
 
     // Insert mock data
     const hotspots = await Hotspot.insertMany(mockData);
-    console.log(`✅ Inserted ${hotspots.length} hotspots into database`);
+    console.log(`Inserted ${hotspots.length} hotspots into database`);
 
     // Display summary
     const stats = {
@@ -45,16 +45,16 @@ async function seedDatabase() {
       low: await Hotspot.countDocuments({ risk_level: 'Low' }),
     };
 
-    console.log('\n📊 Database Summary:');
+    console.log('\nDatabase Summary:');
     console.log(`   Total hotspots: ${stats.total}`);
     console.log(`   High risk: ${stats.high}`);
     console.log(`   Medium risk: ${stats.medium}`);
     console.log(`   Low risk: ${stats.low}`);
 
-    console.log('\n✨ Seeding completed successfully!');
+    console.log('\nSeeding completed successfully!');
     process.exit(0);
   } catch (error: any) {
-    console.error('❌ Error seeding database:', error);
+    console.error('Error seeding database:', error);
     process.exit(1);
   }
 }
